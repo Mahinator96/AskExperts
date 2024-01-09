@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+/* 
+	$maxW - ширина экрана с которой начинается изменение $value в меньшую сторону экрана до $minWidth (задана в var.scss)
+	$minW - ширина экрана на которой изменение $value прекращается на значении $mobSize
+*/
+
+.team-hero__hero {
+  margin-bottom: calc(70px + 70 * ((100vw - 320px) / 1600));
+}
+
+.no-webp .team-hero__hero::before{
+  background-image: url("../img/hero/team-hero-bg.jpg"); }
+
+/* 
+	$maxW - ширина экрана с которой начинается изменение $value в меньшую сторону экрана до $minWidth (задана в var.scss)
+	$minW - ширина экрана на которой изменение $value прекращается на значении $mobSize
+*/
+
+.employees {
+  margin-bottom: calc(70px + 80 * ((100vw - 320px) / 1600));
+}
+
+.employees__grouptitle {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem 2.5rem;
+  margin-bottom: 2.5rem;
+  align-items: end;
+}
+
+.employees__grouptitle .grouptitle__subtitle {
+  margin-bottom: 0.8125rem;
+}
+
+.employees__grouptitle .grouptitle__text {
+  max-width: 39.375em;
+}
+
+.employees__grouptitle button {
+  padding: 0.9375rem 1.875rem;
+  flex-shrink: 0;
+}
+
+.employees__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 2.5rem;
+}
+
+.employees__item {
+  width: calc(33.3333333333% - 34px);
+}
+
+@media (min-width: 1920px) {
+  .team-hero__hero {
+    margin-bottom: 140px;
+  }
+
+  .employees {
+    margin-bottom: 150px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .employees__item {
+    width: calc(33.3333333333% - 20px);
+  }
+}
+
+@media (max-width: 768.9px) {
+  .employees__item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 640.9px) {
+  .employees__grouptitle {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+@media (max-width: 520px) {
+  .employees__item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .team-hero__hero {
+    margin-bottom: 70px;
+  }
+
+  .employees {
+    margin-bottom: 70px;
+  }
+}
+
+@media (any-hover: hover) {
+  .employees__grouptitle button:hover {
+    background-color: transparent;
+    border-color: #181818;
+    color: #181818;
+  }
+}
+
+.webp .team-hero__hero::before{ background-image: url(../img/hero/team-hero-bg.webp); }
